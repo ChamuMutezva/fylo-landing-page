@@ -1,0 +1,151 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    overflow-x: hidden;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    font-family: "Raleway", sans-serif;
+}
+
+aside {
+    width: 100%;
+    /* background-color: hsl(243, 49%, 58%);*/
+    background-image: url("images/bg-intro.svg");
+    background-size: cover;
+
+}
+
+main {
+    width: 90%;
+    margin: 5%;
+}
+
+div#socialContacts {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    margin-bottom: 20%;
+    grid-column-gap: 5%;
+}
+
+.fa-twitter,
+.fa-facebook-f,
+.fa-envelope {
+    margin: auto;
+    padding: 2px;
+    color: white;
+
+    font-size: large;
+}
+
+nav {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1,
+p {
+    text-align: start;
+    margin: 5%;
+}
+
+p {
+    font-size: larger;
+    font-weight: 400;
+}
+
+input[type="text"] {
+    width: 350px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 5% 0;
+}
+
+input[type="submit"] {
+    width: 250px;
+    height: 60px;
+    margin-left: 5%;
+    background-color: teal;
+    color: white;
+    font-size: large;
+}
+
+footer {
+    text-align: end;
+    margin-top: 15%;
+}
+
+aside img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.fa {
+    font-size: x-large;
+}
+
+svg.logo * {
+    fill: white;
+    /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);*/
+}
+
+svg.logo {
+    margin-left: 5%;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+
+        width: 90%;
+    }
+
+    svg.logo,
+    div#socialContacts {
+        transform: scale(0.6);
+    }
+
+    div#socialContacts {}
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .illustration {
+        margin-bottom: 10%;
+        margin-left: -30%;
+        transform: scale(0.6);
+    }
+
+    main {
+        width: 90%;
+        /* margin: 5%; */
+    }
+
+    h1,
+    p {
+        width: 80%;
+        text-align: start;
+        margin: 5% 0;
+    }
+
+    input[type="text"] {
+        width: 70%;
+    }
+
+    footer {
+        text-align: center;
+        font-size: small;
+        margin-top: 15%;
+    }
+}

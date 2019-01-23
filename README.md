@@ -1,5 +1,5 @@
 # Frontend Mentor - Beta sign up split layout
-
+### https://chamumutezva.github.io/fylo-landing-page/ (click link to open live preview)
 ![Header/intro section for the Beta sign up split layout](./design/desktop-preview.jpg)
 
 ## Welcome! 👋

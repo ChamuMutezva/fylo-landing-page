@@ -1,31 +1,42 @@
 body {
     width: 100%;
     overflow-x: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
     font-family: "Raleway", sans-serif;
 }
 
 aside {
-    margin-left: -5%;
-    margin-top: -8px;
-    width: 100%;
-    /* background-color: hsl(243, 49%, 58%);*/
+    width: 50%;
+    height: 800px;
     background-image: url("images/bg-intro.svg");
     background-size: cover;
+}
 
+aside img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
 }
 
 main {
-    width: 100%;
+    width: 50%;
 }
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 div#socialContacts {
     display: grid;
     grid-template-columns: 30px 30px 30px;
-    margin-bottom: 20%;
+    margin: 10% 10% 20% 0;
     grid-column-gap: 5%;
-    margin-top: 10%;
+    justify-self: end;
 }
 
 .fa-twitter,
@@ -38,12 +49,18 @@ div#socialContacts {
     font-size: large;
 }
 
-nav {
-       display: grid;
-    grid-template-columns: 1fr 1fr;
+svg.logo {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+a.fa {
+    font-size: x-large;
+    text-decoration: none;
 }
 
 h1,
+h2,
 p {
     text-align: start;
     margin: 5%;
@@ -54,15 +71,21 @@ p {
     font-weight: 400;
 }
 
+div#signUp {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 input[type="text"] {
-    width: 350px;
+    width: 50%;
     height: 60px;
     border-radius: 10px;
     margin: 5% 0;
 }
 
 input[type="submit"] {
-    width: 250px;
+    width: 40%;
     height: 60px;
     margin-left: 5%;
     background-color: teal;
@@ -71,64 +94,62 @@ input[type="submit"] {
 }
 
 footer {
-    text-align: center;
+    text-align: end;
     margin-top: 15%;
-}
-
-aside img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-a.fa {
-    font-size: x-large;
+    margin-right: 10%;
 }
 
 
-svg.logo {
-    margin-top: 10%;
-    margin-left: 5%;
-}
 
-@media only screen and (max-width: 960px) {
-    body {
-        grid-template-columns: 1fr;
+@media only screen and (min-width: 521px) and (max-width: 825px) {
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    nav {
+        position: absolute;
+        top: 10px;
     }
 
     svg.logo * {
         fill: white;
         /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);*/
     }
-    
-    h2 {
-        margin-left: 5%;
-    }
 
     nav {
         width: 100%;
-        margin-left: 2%;
-    
     }
 
-    svg.logo,
-    div#socialContacts {
-        transform: scale(0.6);
+    .fa-twitter,
+    .fa-facebook-f,
+    .fa-envelope {
+        color: white;
     }
 
-    div#socialContacts {
-        justify-self: end;
-        margin-right: 40%; 
-        grid-column-gap: 20%;
-    }
-
-    .wrapper {
-        grid-template-columns: 1fr;
+    a.fa {
+        font-size: medium;
     }
 
     .illustration {
-        margin-bottom: 10%;
-        margin-left: -20%;
+        margin-top: -15%;
+    }
+
+    aside img {
+        /* transform: scale(0.6); */
+        width: 70%;
+        margin-top: 40%;
+    }
+
+    div#socialContacts {
+        justify-self: center;
+    }
+
+    svg.logo {
         transform: scale(0.6);
     }
 
@@ -136,36 +157,74 @@ svg.logo {
         font-size: x-large;
     }
 
-    p {
+    footer {
+        margin-right: 5%;
+        text-align: end;
+        text-decoration: underline;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 520px) {
+
+    div#contents {
+        margin-top: 40%;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    svg.logo * {
+        fill: white;
+        /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);*/
+    }
+
+    nav {
+        position: absolute;
+        top: 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .fa-twitter,
+    .fa-facebook-f,
+    .fa-envelope {
+        color: white;
+    }
+
+    a.fa {
         font-size: medium;
     }
 
-    h1,
-    h2,
-    p {
-        width: 70%;
-        text-align: start;
-        
+    aside img {
+        /* transform: scale(0.6); */
+        width: 90%;
+        margin-top: 40%;
     }
 
-    input[type="text"] {
-        width: 70%;
-       margin-left: 5%;
-    height: 40px;
+    div#socialContacts {
+        justify-self: center;
     }
 
-    input[type="submit"] {
-        height: 40px;
-        width: 150px;
+    svg.logo {
+        transform: scale(0.6);
     }
-   
-    .fa-twitter, .fa-facebook-f, .fa-envelope {
-                color: white;        
+
+    h1 {
+        font-size: x-large;
     }
 
     footer {
-        margin-right: -25%;
-        font-size: small;
-        
+        margin-right: 5%;
+        text-align: end;
+        text-decoration: underline;
     }
-}

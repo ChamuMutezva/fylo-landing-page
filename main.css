@@ -39,6 +39,10 @@ div#socialContacts {
     justify-self: end;
 }
 
+div#contents {
+    margin-top: 20%;
+}
+
 .fa-twitter,
 .fa-facebook-f,
 .fa-envelope {
@@ -101,7 +105,7 @@ footer {
 
 
 
-@media only screen and (min-width: 521px) and (max-width: 825px) {
+@media only screen and (max-width: 825px) {
 
     aside {
         width: 100%;
@@ -114,15 +118,12 @@ footer {
     nav {
         position: absolute;
         top: 10px;
+        width: 100%;
     }
 
     svg.logo * {
         fill: white;
         /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);*/
-    }
-
-    nav {
-        width: 100%;
     }
 
     .fa-twitter,
@@ -133,16 +134,6 @@ footer {
 
     a.fa {
         font-size: medium;
-    }
-
-    .illustration {
-        margin-top: -15%;
-    }
-
-    aside img {
-        /* transform: scale(0.6); */
-        width: 70%;
-        margin-top: 40%;
     }
 
     div#socialContacts {
@@ -166,44 +157,14 @@ footer {
 }
 
 
-
 @media only screen and (max-width: 520px) {
 
     div#contents {
         margin-top: 40%;
     }
 
-    aside {
-        width: 100%;
-    }
-
     main {
         margin-top: -30%;
-        width: 100%;
-    }
-
-    svg.logo * {
-        fill: white;
-        /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);*/
-    }
-
-    nav {
-        position: absolute;
-        top: 10px;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    .fa-twitter,
-    .fa-facebook-f,
-    .fa-envelope {
-        color: white;
-    }
-
-    a.fa {
-        font-size: medium;
     }
 
     aside img {
@@ -212,20 +173,18 @@ footer {
         margin-top: 40%;
     }
 
-    div#socialContacts {
-        justify-self: center;
+}
+
+@media only screen and (min-width: 521px) and (max-width: 825){
+    
+    .illustration {
+        margin-top: -15%;
     }
 
-    svg.logo {
-        transform: scale(0.6);
+    aside img {
+        /* transform: scale(0.6); */
+        width: 70%;
+        margin-top: 40%;
     }
 
-    h1 {
-        font-size: x-large;
-    }
-
-    footer {
-        margin-right: 5%;
-        text-align: end;
-        text-decoration: underline;
-    }
+}

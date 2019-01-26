@@ -193,10 +193,12 @@ footer {
 
     input[type="text"] {
         width: 90%;
-        justify-self: center
+        justify-self: center;
+        height: 60px;
     }
 
     input[type="submit"] {
         width: 55%;
+        height: 60px;
     }
 }

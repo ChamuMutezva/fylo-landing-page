@@ -83,14 +83,14 @@ div#signUp {
 
 input[type="text"] {
     width: 50%;
-    height: 60px;
+    height: 80px;
     border-radius: 10px;
     margin: 5% 0;
 }
 
 input[type="submit"] {
     width: 40%;
-    height: 60px;
+    height: 80px;
     margin-left: 5%;
     background-color: teal;
     color: white;
@@ -156,6 +156,19 @@ footer {
 
 }
 
+@media only screen and (min-width: 521px) and (max-width: 825) {
+
+    .illustration {
+        margin-top: -15%;
+    }
+
+    aside img {
+        /* transform: scale(0.6); */
+        width: 70%;
+        margin-top: 40%;
+    }
+
+}
 
 @media only screen and (max-width: 520px) {
 
@@ -173,18 +186,17 @@ footer {
         margin-top: 40%;
     }
 
-}
-
-@media only screen and (min-width: 521px) and (max-width: 825){
-    
-    .illustration {
-        margin-top: -15%;
+    div#signUp {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
-    aside img {
-        /* transform: scale(0.6); */
-        width: 70%;
-        margin-top: 40%;
+    input[type="text"] {
+        width: 90%;
+        justify-self: center
     }
 
+    input[type="submit"] {
+        width: 55%;
+    }
 }
